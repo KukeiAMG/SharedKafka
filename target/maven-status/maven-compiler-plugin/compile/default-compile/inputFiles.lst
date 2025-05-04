@@ -1,0 +1,8 @@
+D:\PROGRAMMS\IDEA_Projects\ак\shared-kafka\src\main\java\com\vbartere\Main.java
+D:\PROGRAMMS\IDEA_Projects\ак\shared-kafka\src\main\java\com\vbartere\Shared\Kafka\DTO\AdvertisementDTO.java
+D:\PROGRAMMS\IDEA_Projects\ак\shared-kafka\src\main\java\com\vbartere\Shared\Kafka\DTO\AdvertisementMapper.java
+D:\PROGRAMMS\IDEA_Projects\ак\shared-kafka\src\main\java\com\vbartere\Shared\Kafka\DTO\UserDTO.java
+D:\PROGRAMMS\IDEA_Projects\ак\shared-kafka\src\main\java\com\vbartere\Shared\Kafka\Enum\UserEventType.java
+D:\PROGRAMMS\IDEA_Projects\ак\shared-kafka\src\main\java\com\vbartere\Shared\Kafka\Events\CartEvent.java
+D:\PROGRAMMS\IDEA_Projects\ак\shared-kafka\src\main\java\com\vbartere\Shared\Kafka\Events\CartResult.java
+D:\PROGRAMMS\IDEA_Projects\ак\shared-kafka\src\main\java\com\vbartere\Shared\Kafka\Events\UserEvent.java
