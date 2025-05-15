@@ -9,6 +9,8 @@ public class UserEvent {
     private String email;
     private UserEventType event;
 
+    public UserEvent() {}
+
     public UserEvent(Long id, String name, String email, UserEventType event) {
         this.id = id;
         this.name = name;
