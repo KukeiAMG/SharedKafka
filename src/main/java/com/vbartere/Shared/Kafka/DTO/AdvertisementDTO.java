@@ -12,6 +12,19 @@ public class AdvertisementDTO {
     private List<Long> imagesId;
     private boolean status;
 
+    public AdvertisementDTO() {}
+
+    public AdvertisementDTO(Long id, String title, String description, Long subCategoryId, Long ownerId, Long buyersId, List<Long> imagesId, boolean status) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.subCategoryId = subCategoryId;
+        this.ownerId = ownerId;
+        this.buyersId = buyersId;
+        this.imagesId = imagesId;
+        this.status = status;
+    }
+
     public Long getId() {
         return id;
     }
@@ -73,17 +86,6 @@ public class AdvertisementDTO {
     }
 
     public void setStatus(boolean status) {
-        this.status = status;
-    }
-
-    public AdvertisementDTO(Long id, String title, String description, Long subCategoryId, Long ownerId, Long buyersId, List<Long> imagesId, boolean status) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.subCategoryId = subCategoryId;
-        this.ownerId = ownerId;
-        this.buyersId = buyersId;
-        this.imagesId = imagesId;
         this.status = status;
     }
 
