@@ -1,4 +1,4 @@
-package com.vbartere.Shared.Kafka.DTO;
+package com.vbartere.Shared.Kafka.DTO.Advertisement;
 
 import java.util.List;
 
