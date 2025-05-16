@@ -8,16 +8,18 @@ public class ImageDTO {
     private String contentType;
     private Long size;
     private boolean isPreviewImage;
+    private String url;
 
     public ImageDTO() {}
 
-    public ImageDTO(Long id, String name, String originalFileName, String contentType, Long size, boolean isPreviewImage) {
+    public ImageDTO(Long id, String name, String originalFileName, String contentType, Long size, boolean isPreviewImage, String url) {
         this.id = id;
         this.name = name;
         this.originalFileName = originalFileName;
         this.contentType = contentType;
         this.size = size;
         this.isPreviewImage = isPreviewImage;
+        this.url = url;
     }
 
     public Long getId() {
@@ -66,5 +68,13 @@ public class ImageDTO {
 
     public void setPreviewImage(boolean previewImage) {
         isPreviewImage = previewImage;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }
