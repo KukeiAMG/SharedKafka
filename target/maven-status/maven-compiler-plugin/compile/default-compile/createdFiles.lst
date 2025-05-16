@@ -1,7 +1,10 @@
 com\vbartere\Shared\Kafka\DTO\AdvertisementDTO.class
 com\vbartere\Shared\Kafka\Enum\UserEventType.class
 com\vbartere\Main.class
+com\vbartere\Shared\Kafka\DTO\AdminService\AdminUserDTO.class
+com\vbartere\Shared\Kafka\DTO\UserReferralDTO.class
 com\vbartere\Shared\Kafka\Events\CartResult.class
+com\vbartere\Shared\Kafka\DTO\AdminService\AdminAdvertisementDTO.class
 com\vbartere\Shared\Kafka\DTO\UserDTO.class
 com\vbartere\Shared\Kafka\Events\CartEvent.class
 com\vbartere\Shared\Kafka\Events\UserEvent.class
