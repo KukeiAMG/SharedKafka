@@ -1,5 +1,7 @@
 package com.vbartere.Shared.Kafka.DTO.AdminService;
 
+import com.vbartere.Shared.Kafka.Enum.AdvertisementEventType;
+
 import java.util.List;
 
 public class AdminAdvertisementDTO {
@@ -25,9 +27,11 @@ public class AdminAdvertisementDTO {
 
     private Boolean status;
 
+    private AdvertisementEventType eventType;
+
     public AdminAdvertisementDTO() {}
 
-    public AdminAdvertisementDTO(Long id, String title, String description, Long subcategoryId, String subcategoryTitle, List<String> imageUrls, Long ownerId, String ownerUsername, Long buyersId, String buyerUsername, Boolean status) {
+    public AdminAdvertisementDTO(Long id, String title, String description, Long subcategoryId, String subcategoryTitle, List<String> imageUrls, Long ownerId, String ownerUsername, Long buyersId, String buyerUsername, Boolean status, AdvertisementEventType eventType) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -39,6 +43,7 @@ public class AdminAdvertisementDTO {
         this.buyersId = buyersId;
         this.buyerUsername = buyerUsername;
         this.status = status;
+        this.eventType = eventType;
     }
 
     public Long getId() {
@@ -127,5 +132,13 @@ public class AdminAdvertisementDTO {
 
     public void setStatus(Boolean status) {
         this.status = status;
+    }
+
+    public AdvertisementEventType getEventType() {
+        return eventType;
+    }
+
+    public void setEventType(AdvertisementEventType eventType) {
+        this.eventType = eventType;
     }
 }
