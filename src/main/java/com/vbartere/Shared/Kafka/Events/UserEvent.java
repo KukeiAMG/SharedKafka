@@ -8,6 +8,7 @@ public class UserEvent {
     private String name;
     private String email;
     private UserEventType event;
+    private String description;
 
     public UserEvent() {}
 
@@ -48,6 +49,14 @@ public class UserEvent {
 
     public void setEvent(UserEventType event) {
         this.event = event;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
