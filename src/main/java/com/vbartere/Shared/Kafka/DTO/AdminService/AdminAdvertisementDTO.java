@@ -31,9 +31,11 @@ public class AdminAdvertisementDTO {
 
     private AdvertisementEventType eventType;
 
+    private Boolean banStatus;
+
     public AdminAdvertisementDTO() {}
 
-    public AdminAdvertisementDTO(Long id, String title, String description, Long subcategoryId, String subcategoryTitle, List<String> imageUrls, Long ownerId, String ownerUsername, Long buyersId, String buyerUsername, Boolean status, AdvertisementEventType eventType) {
+    public AdminAdvertisementDTO(Long id, String title, String description, Long subcategoryId, String subcategoryTitle, List<String> imageUrls, Long ownerId, String ownerUsername, Long buyersId, String buyerUsername, Boolean status, AdvertisementEventType eventType, Boolean banStatus) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -46,6 +48,7 @@ public class AdminAdvertisementDTO {
         this.buyerUsername = buyerUsername;
         this.status = status;
         this.eventType = eventType;
+        this.banStatus = banStatus;
     }
 
     public Long getId() {
@@ -142,5 +145,13 @@ public class AdminAdvertisementDTO {
 
     public void setEventType(AdvertisementEventType eventType) {
         this.eventType = eventType;
+    }
+
+    public Boolean getBanStatus() {
+        return banStatus;
+    }
+
+    public void setBanStatus(Boolean banStatus) {
+        this.banStatus = banStatus;
     }
 }
