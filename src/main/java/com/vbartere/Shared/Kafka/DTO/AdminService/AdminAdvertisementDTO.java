@@ -1,6 +1,7 @@
 package com.vbartere.Shared.Kafka.DTO.AdminService;
 
 import com.vbartere.Shared.Kafka.Enum.AdvertisementEventType;
+import jakarta.persistence.ElementCollection;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ public class AdminAdvertisementDTO {
 
     private String subcategoryTitle;
 
+    @ElementCollection
     private List<String> imageUrls;
 
     private Long ownerId;
