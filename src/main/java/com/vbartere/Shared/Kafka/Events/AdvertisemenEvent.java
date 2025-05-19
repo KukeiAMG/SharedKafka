@@ -26,14 +26,16 @@ public class AdvertisemenEvent {
     private Long id;
     private String name;
     private String description;
+    private Long ownerId;
     private AdvertisementEventType eventType;
 
     public AdvertisemenEvent() {}
 
-    public AdvertisemenEvent(Long id, String name, String description, AdvertisementEventType eventType) {
+    public AdvertisemenEvent(Long id, String name, String description, Long ownerId, AdvertisementEventType eventType) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.ownerId = ownerId;
         this.eventType = eventType;
     }
 
@@ -67,5 +69,13 @@ public class AdvertisemenEvent {
 
     public void setEventType(AdvertisementEventType eventType) {
         this.eventType = eventType;
+    }
+
+    public Long getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
     }
 }
