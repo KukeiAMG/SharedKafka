@@ -23,14 +23,14 @@ public class AdminUserDTO {
     @ElementCollection
     private Set<String> roles;
 
-    public boolean isBanned;
+    public boolean banned;
 
     public UserEventType event;
 
     public AdminUserDTO() {
     }
 
-    public AdminUserDTO(Long id, String phoneNumber, String name, String surname, String invitedByCode, String email, String imageUrl, Set<String> roles, boolean isBanned, UserEventType event) {
+    public AdminUserDTO(Long id, String phoneNumber, String name, String surname, String invitedByCode, String email, String imageUrl, Set<String> roles, boolean banned, UserEventType event) {
         this.id = id;
         this.phoneNumber = phoneNumber;
         this.name = name;
@@ -39,7 +39,7 @@ public class AdminUserDTO {
         this.email = email;
         this.imageUrl = imageUrl;
         this.roles = roles;
-        this.isBanned = isBanned;
+        this.banned = banned;
         this.event = event;
     }
 
@@ -108,11 +108,11 @@ public class AdminUserDTO {
     }
 
     public boolean isBanned() {
-        return isBanned;
+        return banned;
     }
 
     public void setBanned(boolean banned) {
-        isBanned = banned;
+        banned = banned;
     }
 
     public UserEventType getEvent() {
