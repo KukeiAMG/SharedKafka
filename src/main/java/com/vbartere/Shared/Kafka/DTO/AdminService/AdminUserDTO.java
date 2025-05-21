@@ -3,6 +3,7 @@ package com.vbartere.Shared.Kafka.DTO.AdminService;
 import com.vbartere.Shared.Kafka.Enum.UserEventType;
 import jakarta.persistence.ElementCollection;
 
+import java.util.List;
 import java.util.Set;
 
 public class AdminUserDTO {
@@ -27,10 +28,12 @@ public class AdminUserDTO {
 
     public UserEventType event;
 
+    private List<Long> addedAdvertisements;
+
     public AdminUserDTO() {
     }
 
-    public AdminUserDTO(Long id, String phoneNumber, String name, String surname, String invitedByCode, String email, String imageUrl, Set<String> roles, boolean banned, UserEventType event) {
+    public AdminUserDTO(Long id, String phoneNumber, String name, String surname, String invitedByCode, String email, String imageUrl, Set<String> roles, boolean banned, UserEventType event, List<Long> addedAdvertisements) {
         this.id = id;
         this.phoneNumber = phoneNumber;
         this.name = name;
@@ -41,6 +44,7 @@ public class AdminUserDTO {
         this.roles = roles;
         this.banned = banned;
         this.event = event;
+        this.addedAdvertisements = addedAdvertisements;
     }
 
     public Long getId() {
@@ -112,7 +116,7 @@ public class AdminUserDTO {
     }
 
     public void setBanned(boolean banned) {
-        banned = banned;
+        this.banned = banned;
     }
 
     public UserEventType getEvent() {
@@ -121,5 +125,13 @@ public class AdminUserDTO {
 
     public void setEvent(UserEventType event) {
         this.event = event;
+    }
+
+    public List<Long> getAddedAdvertisements() {
+        return addedAdvertisements;
+    }
+
+    public void setAddedAdvertisements(List<Long> addedAdvertisements) {
+        this.addedAdvertisements = addedAdvertisements;
     }
 }
