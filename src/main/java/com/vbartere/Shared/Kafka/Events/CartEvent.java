@@ -5,21 +5,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CartEvent {
     private Long userId;
+    private boolean isBanned;
     private Long advertisementId;
 
-    @JsonCreator
-    public CartEvent(@JsonProperty("userId") Long userId, @JsonProperty("advertisementId") Long advertisementId) {
+    public CartEvent() {}
+
+    public CartEvent(Long userId, boolean isBanned, Long advertisementId) {
         this.userId = userId;
+        this.isBanned = isBanned;
         this.advertisementId = advertisementId;
     }
 
-    // Геттеры и сеттеры
     public Long getUserId() {
         return userId;
     }
 
     public void setUserId(Long userId) {
         this.userId = userId;
+    }
+
+    public boolean isBanned() {
+        return isBanned;
+    }
+
+    public void setBanned(boolean banned) {
+        isBanned = banned;
     }
 
     public Long getAdvertisementId() {
@@ -34,6 +44,7 @@ public class CartEvent {
     public String toString() {
         return "CartEvent{" +
                 "userId=" + userId +
+                ", isBanned=" + isBanned +
                 ", advertisementId=" + advertisementId +
                 '}';
     }
