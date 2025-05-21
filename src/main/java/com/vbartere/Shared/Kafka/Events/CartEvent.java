@@ -8,7 +8,7 @@ public class CartEvent {
     private Long userId;
     private boolean isBanned;
     private Long advertisementId;
-    private CartEventType cartEventType
+    private CartEventType cartEventType;
 
     public CartEvent() {}
 
