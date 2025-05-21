@@ -7,12 +7,17 @@ public class CartResult {
     private Long userId;
     private Long advertisementId;
     private boolean successful;
+    private boolean forceClear;
 
     @JsonCreator
-    public CartResult(@JsonProperty("userId") Long userId, @JsonProperty("advertisementId") Long advertisementId, @JsonProperty("successful") boolean successful) {
+    public CartResult(@JsonProperty("userId") Long userId,
+                      @JsonProperty("advertisementId") Long advertisementId,
+                      @JsonProperty("successful") boolean successful,
+                      @JsonProperty("forceClear") boolean forceClear) {
         this.userId = userId;
         this.advertisementId = advertisementId;
         this.successful = successful;
+        this.forceClear = forceClear;
     }
 
     public Long getUserId() {
@@ -39,12 +44,21 @@ public class CartResult {
         this.successful = successful;
     }
 
+    public boolean isForceClear() {
+        return forceClear;
+    }
+
+    public void setForceClear(boolean forceClear) {
+        this.forceClear = forceClear;
+    }
+
     @Override
     public String toString() {
         return "CartResult{" +
                 "userId=" + userId +
                 ", advertisementId=" + advertisementId +
                 ", successful=" + successful +
+                ", forceClear=" + forceClear +
                 '}';
     }
 }
