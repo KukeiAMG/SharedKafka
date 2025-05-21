@@ -6,18 +6,23 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CartResult {
     private Long userId;
     private Long advertisementId;
-    private boolean successful;
+    private boolean addToCart;
     private boolean forceClear;
+    private boolean removeFromCart;
+
+    public CartResult() {}
 
     @JsonCreator
     public CartResult(@JsonProperty("userId") Long userId,
                       @JsonProperty("advertisementId") Long advertisementId,
-                      @JsonProperty("successful") boolean successful,
-                      @JsonProperty("forceClear") boolean forceClear) {
+                      @JsonProperty("addToCart") boolean addToCart,
+                      @JsonProperty("forceClear") boolean forceClear,
+                      @JsonProperty("removeFromCart") boolean removeFromCart) {
         this.userId = userId;
         this.advertisementId = advertisementId;
-        this.successful = successful;
+        this.addToCart = addToCart;
         this.forceClear = forceClear;
+        this.removeFromCart = removeFromCart;
     }
 
     public Long getUserId() {
@@ -36,12 +41,12 @@ public class CartResult {
         this.advertisementId = advertisementId;
     }
 
-    public boolean isSuccessful() {
-        return successful;
+    public boolean isAddToCart() {
+        return addToCart;
     }
 
-    public void setSuccessful(boolean successful) {
-        this.successful = successful;
+    public void setAddToCart(boolean addToCart) {
+        this.addToCart = addToCart;
     }
 
     public boolean isForceClear() {
@@ -52,13 +57,22 @@ public class CartResult {
         this.forceClear = forceClear;
     }
 
+    public boolean isRemoveFromCart() {
+        return removeFromCart;
+    }
+
+    public void setRemoveFromCart(boolean removeFromCart) {
+        this.removeFromCart = removeFromCart;
+    }
+
     @Override
     public String toString() {
         return "CartResult{" +
                 "userId=" + userId +
                 ", advertisementId=" + advertisementId +
-                ", successful=" + successful +
+                ", addToCart=" + addToCart +
                 ", forceClear=" + forceClear +
+                ", removeFromCart=" + removeFromCart +
                 '}';
     }
 }
