@@ -154,4 +154,23 @@ public class AdminAdvertisementDTO {
     public void setBanStatus(Boolean banStatus) {
         this.banStatus = banStatus;
     }
+
+    @Override
+    public String toString() {
+        return "AdminAdvertisementDTO{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", subcategoryId=" + subcategoryId +
+                ", subcategoryTitle='" + subcategoryTitle + '\'' +
+                ", imageUrls=" + imageUrls +
+                ", ownerId=" + ownerId +
+                ", ownerUsername='" + ownerUsername + '\'' +
+                ", buyersId=" + buyersId +
+                ", buyerUsername='" + buyerUsername + '\'' +
+                ", status=" + status +
+                ", eventType=" + eventType +
+                ", banStatus=" + banStatus +
+                '}';
+    }
 }

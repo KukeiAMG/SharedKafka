@@ -134,4 +134,21 @@ public class AdminUserDTO {
     public void setAddedAdvertisements(List<Long> addedAdvertisements) {
         this.addedAdvertisements = addedAdvertisements;
     }
+
+    @Override
+    public String toString() {
+        return "AdminUserDTO{" +
+                "id=" + id +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", invitedByCode='" + invitedByCode + '\'' +
+                ", email='" + email + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", roles=" + roles +
+                ", banned=" + banned +
+                ", event=" + event +
+                ", addedAdvertisements=" + addedAdvertisements +
+                '}';
+    }
 }
