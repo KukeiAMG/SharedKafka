@@ -2,27 +2,25 @@ package com.vbartere.Shared.Kafka.Events;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.vbartere.Shared.Kafka.Enum.UserEventType;
 
 public class CartResult {
     private Long userId;
     private Long advertisementId;
-    private boolean addToCart;
-    private boolean forceClear;
-    private boolean removeFromCart;
+    private boolean successfullyProcessed;
+    private UserEventType eventType;
 
     public CartResult() {}
 
     @JsonCreator
     public CartResult(@JsonProperty("userId") Long userId,
                       @JsonProperty("advertisementId") Long advertisementId,
-                      @JsonProperty("addToCart") boolean addToCart,
-                      @JsonProperty("forceClear") boolean forceClear,
-                      @JsonProperty("removeFromCart") boolean removeFromCart) {
+                      @JsonProperty("successfullyProcessed") boolean successfullyProcessed,
+                      @JsonProperty("eventType") UserEventType eventType) {
         this.userId = userId;
         this.advertisementId = advertisementId;
-        this.addToCart = addToCart;
-        this.forceClear = forceClear;
-        this.removeFromCart = removeFromCart;
+        this.successfullyProcessed = successfullyProcessed;
+        this.eventType = eventType;
     }
 
     public Long getUserId() {
@@ -41,28 +39,20 @@ public class CartResult {
         this.advertisementId = advertisementId;
     }
 
-    public boolean isAddToCart() {
-        return addToCart;
+    public boolean isSuccessfullyProcessed() {
+        return successfullyProcessed;
     }
 
-    public void setAddToCart(boolean addToCart) {
-        this.addToCart = addToCart;
+    public void setSuccessfullyProcessed(boolean successfullyProcessed) {
+        this.successfullyProcessed = successfullyProcessed;
     }
 
-    public boolean isForceClear() {
-        return forceClear;
+    public UserEventType getEventType() {
+        return eventType;
     }
 
-    public void setForceClear(boolean forceClear) {
-        this.forceClear = forceClear;
-    }
-
-    public boolean isRemoveFromCart() {
-        return removeFromCart;
-    }
-
-    public void setRemoveFromCart(boolean removeFromCart) {
-        this.removeFromCart = removeFromCart;
+    public void setEventType(UserEventType eventType) {
+        this.eventType = eventType;
     }
 
     @Override
@@ -70,9 +60,8 @@ public class CartResult {
         return "CartResult{" +
                 "userId=" + userId +
                 ", advertisementId=" + advertisementId +
-                ", addToCart=" + addToCart +
-                ", forceClear=" + forceClear +
-                ", removeFromCart=" + removeFromCart +
+                ", successfullyProcessed=" + successfullyProcessed +
+                ", eventType=" + eventType +
                 '}';
     }
 }
