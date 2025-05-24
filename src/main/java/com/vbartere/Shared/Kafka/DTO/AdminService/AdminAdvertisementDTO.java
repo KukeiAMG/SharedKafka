@@ -3,6 +3,7 @@ package com.vbartere.Shared.Kafka.DTO.AdminService;
 import com.vbartere.Shared.Kafka.Enum.AdvertisementEventType;
 import jakarta.persistence.ElementCollection;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public class AdminAdvertisementDTO {
@@ -33,9 +34,11 @@ public class AdminAdvertisementDTO {
 
     private Boolean banStatus;
 
+    private BigDecimal price;
+
     public AdminAdvertisementDTO() {}
 
-    public AdminAdvertisementDTO(Long id, String title, String description, Long subcategoryId, String subcategoryTitle, List<String> imageUrls, Long ownerId, String ownerUsername, Long buyersId, String buyerUsername, Boolean status, AdvertisementEventType eventType, Boolean banStatus) {
+    public AdminAdvertisementDTO(Long id, String title, String description, Long subcategoryId, String subcategoryTitle, List<String> imageUrls, Long ownerId, String ownerUsername, Long buyersId, String buyerUsername, Boolean status, AdvertisementEventType eventType, Boolean banStatus, BigDecimal price) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -49,6 +52,7 @@ public class AdminAdvertisementDTO {
         this.status = status;
         this.eventType = eventType;
         this.banStatus = banStatus;
+        this.price = price;
     }
 
     public Long getId() {
@@ -155,6 +159,14 @@ public class AdminAdvertisementDTO {
         this.banStatus = banStatus;
     }
 
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
     @Override
     public String toString() {
         return "AdminAdvertisementDTO{" +
@@ -171,6 +183,7 @@ public class AdminAdvertisementDTO {
                 ", status=" + status +
                 ", eventType=" + eventType +
                 ", banStatus=" + banStatus +
+                ", price=" + price +
                 '}';
     }
 }
