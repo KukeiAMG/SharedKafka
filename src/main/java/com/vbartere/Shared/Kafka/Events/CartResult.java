@@ -4,9 +4,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.vbartere.Shared.Kafka.Enum.UserEventType;
 
+import java.math.BigDecimal;
+
 public class CartResult {
     private Long userId;
     private Long advertisementId;
+    private BigDecimal price;
     private boolean successfullyProcessed;
     private UserEventType eventType;
 
@@ -15,6 +18,7 @@ public class CartResult {
     @JsonCreator
     public CartResult(@JsonProperty("userId") Long userId,
                       @JsonProperty("advertisementId") Long advertisementId,
+                      @JsonProperty("price") BigDecimal price,
                       @JsonProperty("successfullyProcessed") boolean successfullyProcessed,
                       @JsonProperty("eventType") UserEventType eventType) {
         this.userId = userId;
@@ -39,6 +43,14 @@ public class CartResult {
         this.advertisementId = advertisementId;
     }
 
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
     public boolean isSuccessfullyProcessed() {
         return successfullyProcessed;
     }
@@ -60,6 +72,7 @@ public class CartResult {
         return "CartResult{" +
                 "userId=" + userId +
                 ", advertisementId=" + advertisementId +
+                ", price=" + price +
                 ", successfullyProcessed=" + successfullyProcessed +
                 ", eventType=" + eventType +
                 '}';
