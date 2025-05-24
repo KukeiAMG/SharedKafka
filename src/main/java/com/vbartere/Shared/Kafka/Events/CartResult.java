@@ -25,6 +25,7 @@ public class CartResult {
                       @JsonProperty("eventType") UserEventType eventType) {
         this.userId = userId;
         this.advertisementId = advertisementId;
+        this.price = price;
         this.successfullyProcessed = successfullyProcessed;
         this.eventType = eventType;
     }
