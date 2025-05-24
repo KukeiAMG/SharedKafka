@@ -5,14 +5,12 @@ import java.util.Map;
 
 public class PaymentDTO {
     private Long buyersId;
-    private Long advertisementsOwnerId;
     private Map<Long, BigDecimal> advertisementsWithPrice;
 
     public PaymentDTO() {}
 
-    public PaymentDTO(Long buyersId, Long advertisementsOwnerId, Map<Long, BigDecimal> advertisementsWithPrice) {
+    public PaymentDTO(Long buyersId, Map<Long, BigDecimal> advertisementsWithPrice) {
         this.buyersId = buyersId;
-        this.advertisementsOwnerId = advertisementsOwnerId;
         this.advertisementsWithPrice = advertisementsWithPrice;
     }
 
@@ -22,14 +20,6 @@ public class PaymentDTO {
 
     public void setBuyersId(Long buyersId) {
         this.buyersId = buyersId;
-    }
-
-    public Long getAdvertisementsOwnerId() {
-        return advertisementsOwnerId;
-    }
-
-    public void setAdvertisementsOwnerId(Long advertisementsOwnerId) {
-        this.advertisementsOwnerId = advertisementsOwnerId;
     }
 
     public Map<Long, BigDecimal> getAdvertisementsWithPrice() {
@@ -44,7 +34,6 @@ public class PaymentDTO {
     public String toString() {
         return "PaymentDTO{" +
                 "buyersId=" + buyersId +
-                ", advertisementsOwnerId=" + advertisementsOwnerId +
                 ", advertisementsWithPrice=" + advertisementsWithPrice +
                 '}';
     }
