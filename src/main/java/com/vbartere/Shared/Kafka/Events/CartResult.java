@@ -1,6 +1,7 @@
 package com.vbartere.Shared.Kafka.Events;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.vbartere.Shared.Kafka.Enum.UserEventType;
 
@@ -9,6 +10,7 @@ import java.math.BigDecimal;
 public class CartResult {
     private Long userId;
     private Long advertisementId;
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private BigDecimal price;
     private boolean successfullyProcessed;
     private UserEventType eventType;

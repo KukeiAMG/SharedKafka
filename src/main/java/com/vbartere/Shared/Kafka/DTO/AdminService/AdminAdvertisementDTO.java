@@ -1,5 +1,6 @@
 package com.vbartere.Shared.Kafka.DTO.AdminService;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.vbartere.Shared.Kafka.Enum.AdvertisementEventType;
 import jakarta.persistence.ElementCollection;
 
@@ -33,7 +34,7 @@ public class AdminAdvertisementDTO {
     private AdvertisementEventType eventType;
 
     private Boolean banStatus;
-
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private BigDecimal price;
 
     public AdminAdvertisementDTO() {}
