@@ -1,5 +1,6 @@
 package com.vbartere.Shared.Kafka.DTO.Advertisement;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public class AdvertisementDTO {
@@ -11,10 +12,11 @@ public class AdvertisementDTO {
     private Long buyersId;
     private List<Long> imagesId;
     private boolean status;
+    private BigDecimal price;
 
     public AdvertisementDTO() {}
 
-    public AdvertisementDTO(Long id, String title, String description, Long subCategoryId, Long ownerId, Long buyersId, List<Long> imagesId, boolean status) {
+    public AdvertisementDTO(Long id, String title, String description, Long subCategoryId, Long ownerId, Long buyersId, List<Long> imagesId, boolean status, BigDecimal price) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -23,6 +25,7 @@ public class AdvertisementDTO {
         this.buyersId = buyersId;
         this.imagesId = imagesId;
         this.status = status;
+        this.price = price;
     }
 
     public Long getId() {
@@ -87,6 +90,14 @@ public class AdvertisementDTO {
 
     public void setStatus(boolean status) {
         this.status = status;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 
     @Override
