@@ -1,5 +1,7 @@
 package com.vbartere.Shared.Kafka.DTO.Advertisement;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -12,6 +14,7 @@ public class AdvertisementDTO {
     private Long buyersId;
     private List<Long> imagesId;
     private boolean status;
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private BigDecimal price;
 
     public AdvertisementDTO() {}

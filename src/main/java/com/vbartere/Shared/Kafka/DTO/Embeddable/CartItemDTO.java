@@ -1,5 +1,6 @@
 package com.vbartere.Shared.Kafka.DTO.Embeddable;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Embeddable;
 
 import java.math.BigDecimal;
@@ -7,6 +8,7 @@ import java.math.BigDecimal;
 @Embeddable
 public class CartItemDTO {
     private Long advertisementId;
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private BigDecimal price;
     private Boolean selected;
 
