@@ -1,5 +1,6 @@
 package com.vbartere.Shared.Kafka.DTO.AdminService;
 
+import com.vbartere.Shared.Kafka.DTO.Embeddable.CartItemDTO;
 import com.vbartere.Shared.Kafka.Enum.UserEventType;
 import jakarta.persistence.ElementCollection;
 
@@ -28,12 +29,12 @@ public class AdminUserDTO {
 
     public UserEventType event;
 
-    private List<Long> addedAdvertisements;
+    private List<CartItemDTO> addedAdvertisements;
 
     public AdminUserDTO() {
     }
 
-    public AdminUserDTO(Long id, String phoneNumber, String name, String surname, String invitedByCode, String email, String imageUrl, Set<String> roles, boolean banned, UserEventType event, List<Long> addedAdvertisements) {
+    public AdminUserDTO(Long id, String phoneNumber, String name, String surname, String invitedByCode, String email, String imageUrl, Set<String> roles, boolean banned, UserEventType event, List<CartItemDTO> addedAdvertisements) {
         this.id = id;
         this.phoneNumber = phoneNumber;
         this.name = name;
@@ -127,11 +128,11 @@ public class AdminUserDTO {
         this.event = event;
     }
 
-    public List<Long> getAddedAdvertisements() {
+    public List<CartItemDTO> getAddedAdvertisements() {
         return addedAdvertisements;
     }
 
-    public void setAddedAdvertisements(List<Long> addedAdvertisements) {
+    public void setAddedAdvertisements(List<CartItemDTO> addedAdvertisements) {
         this.addedAdvertisements = addedAdvertisements;
     }
 
