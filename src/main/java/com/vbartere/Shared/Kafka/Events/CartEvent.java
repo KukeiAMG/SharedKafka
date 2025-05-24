@@ -4,18 +4,22 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.vbartere.Shared.Kafka.Enum.CartEventType;
 
+import java.math.BigDecimal;
+
 public class CartEvent {
     private Long userId;
     private boolean isBanned;
     private Long advertisementId;
+    private BigDecimal price;
     private CartEventType cartEventType;
 
     public CartEvent() {}
 
-    public CartEvent(Long userId, boolean isBanned, Long advertisementId, CartEventType cartEventType) {
+    public CartEvent(Long userId, boolean isBanned, Long advertisementId, BigDecimal price, CartEventType cartEventType) {
         this.userId = userId;
         this.isBanned = isBanned;
         this.advertisementId = advertisementId;
+        this.price = price;
         this.cartEventType = cartEventType;
     }
 
@@ -43,6 +47,14 @@ public class CartEvent {
         this.advertisementId = advertisementId;
     }
 
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
     public CartEventType getCartEventType() {
         return cartEventType;
     }
@@ -57,6 +69,7 @@ public class CartEvent {
                 "userId=" + userId +
                 ", isBanned=" + isBanned +
                 ", advertisementId=" + advertisementId +
+                ", price=" + price +
                 ", cartEventType=" + cartEventType +
                 '}';
     }
