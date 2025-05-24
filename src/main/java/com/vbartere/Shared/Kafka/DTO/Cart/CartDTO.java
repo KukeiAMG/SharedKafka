@@ -1,15 +1,17 @@
 package com.vbartere.Shared.Kafka.DTO.Cart;
 
+import com.vbartere.Shared.Kafka.DTO.Embeddable.CartItemDTO;
+
 import java.util.List;
 
 public class CartDTO {
     private Long id;
     private Long userId;
-    private List<Long> advertisementIds;
+    private List<CartItemDTO> advertisementIds;
 
     public CartDTO() {}
 
-    public CartDTO(Long id, Long userId, List<Long> advertisementIds) {
+    public CartDTO(Long id, Long userId, List<CartItemDTO> advertisementIds) {
         this.id = id;
         this.userId = userId;
         this.advertisementIds = advertisementIds;
@@ -31,11 +33,11 @@ public class CartDTO {
         this.userId = userId;
     }
 
-    public List<Long> getAdvertisementIds() {
+    public List<CartItemDTO> getAdvertisementIds() {
         return advertisementIds;
     }
 
-    public void setAdvertisementIds(List<Long> advertisementIds) {
+    public void setAdvertisementIds(List<CartItemDTO> advertisementIds) {
         this.advertisementIds = advertisementIds;
     }
 
