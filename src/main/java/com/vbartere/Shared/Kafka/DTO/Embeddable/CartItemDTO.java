@@ -8,12 +8,14 @@ import java.math.BigDecimal;
 public class CartItemDTO {
     private Long advertisementId;
     private BigDecimal price;
+    private Boolean selected;
 
     public CartItemDTO() {}
 
-    public CartItemDTO(Long advertisementId, BigDecimal price) {
+    public CartItemDTO(Long advertisementId, BigDecimal price, Boolean selected) {
         this.advertisementId = advertisementId;
         this.price = price;
+        this.selected = selected;
     }
 
     public Long getAdvertisementId() {
@@ -32,11 +34,20 @@ public class CartItemDTO {
         this.price = price;
     }
 
+    public Boolean getSelected() {
+        return selected;
+    }
+
+    public void setSelected(Boolean selected) {
+        this.selected = selected;
+    }
+
     @Override
     public String toString() {
-        return "CartItem{" +
+        return "CartItemDTO{" +
                 "advertisementId=" + advertisementId +
                 ", price=" + price +
+                ", selected=" + selected +
                 '}';
     }
 }
